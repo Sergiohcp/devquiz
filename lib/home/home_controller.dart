@@ -22,9 +22,7 @@ class HomeController {
 
   void getQuizzes() async {
     state = HomeState.loading;
-    print("PASSOU AQUI");
     quizzes = await repository.getQuizzes();
-    print("PASSOU AQUI 2");
     state = HomeState.success;
   }
 }
