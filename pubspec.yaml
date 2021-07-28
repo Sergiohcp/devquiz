@@ -20,5 +20,6 @@ flutter:
   assets:
     - assets/images/
     - assets/database/
+    - assets/screeshots/
 
   uses-material-design: true
