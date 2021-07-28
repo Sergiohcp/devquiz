@@ -3,6 +3,7 @@ import 'package:DevQuiz/core/app_images.dart';
 import 'package:DevQuiz/core/app_text_styles.dart';
 import 'package:DevQuiz/home/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ResultPage extends StatelessWidget {
   final String title;
@@ -56,7 +57,9 @@ class ResultPage extends StatelessWidget {
                         child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 68),
                       child: NextButtonWidget.purple(
-                          label: 'Compartilhar', onTap: () {}),
+                          label: 'Compartilhar',
+                          onTap: () => Share.share(
+                              'Eu conclui $result de $length do $title')),
                     )),
                   ],
                 ),
